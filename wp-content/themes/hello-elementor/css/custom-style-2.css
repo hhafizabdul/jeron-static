@@ -1,0 +1,68 @@
+.sliding-text {
+    --speed: 10s;  /* Speed for the sliding-text class */
+}
+
+.sliding-text .elementor-widget-wrap {
+    display: block !important;
+}
+
+.sliding-text .elementor-widget {
+    overflow: hidden;
+    width: 10000vw !important;
+    max-width: 10000vw !important;
+}
+
+.sliding-text .sliding .elementor-widget-container {
+    -webkit-animation: sliding var(--speed) linear infinite;
+    -moz-animation: sliding var(--speed) linear infinite;
+    -o-animation: sliding var(--speed) linear infinite;
+    animation: sliding var(--speed) linear infinite;
+}
+
+.sliding-text .elementor-widget-container {
+    float: left;
+}
+
+.sliding-text.reverse {
+    transform: rotate(180deg);
+}
+
+.sliding-text.reverse .sliding .elementor-heading-title {
+    transform: scale(-1, -1);
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-moz-keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-o-keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

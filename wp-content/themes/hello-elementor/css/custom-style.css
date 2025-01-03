@@ -1,0 +1,68 @@
+.sliding-text-2 {
+    --speed: 20s;  /* Speed for the sliding-text-2 class */
+}
+
+.sliding-text-2 .elementor-widget-wrap {
+    display: block !important;
+}
+
+.sliding-text-2 .elementor-widget {
+    overflow: hidden;
+    width: 10000vw !important;
+    max-width: 10000vw !important;
+}
+
+.sliding-text-2 .sliding .elementor-widget-container {
+    -webkit-animation: sliding var(--speed) linear infinite;
+    -moz-animation: sliding var(--speed) linear infinite;
+    -o-animation: sliding var(--speed) linear infinite;
+    animation: sliding var(--speed) linear infinite;
+}
+
+.sliding-text-2 .elementor-widget-container {
+    float: left;
+}
+
+.sliding-text-2.reverse {
+    transform: rotate(180deg);
+}
+
+.sliding-text-2.reverse .sliding .elementor-heading-title {
+    transform: scale(-1, -1);
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-moz-keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-o-keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
